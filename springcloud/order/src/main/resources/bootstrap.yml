@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: orderservice
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      config:
+        namespace: dev
+        file-extension: yaml
+

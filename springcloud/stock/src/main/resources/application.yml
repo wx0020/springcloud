@@ -1,0 +1,53 @@
+
+server:
+  port: 8083
+spring:
+  application:
+    name: stockservice
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        username: nacos
+        password: nacos
+
+    datasource:
+      url: jdbc:mysql://localhost:3306/cloud_user?useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+    zipkin:
+      base-url: http://localhost:9411
+      sender:
+        type: web
+      #设置Sleuth的抽样收集概率,1=100%,因为我们目前是测试环境所以用1
+      sleuth:
+        sampler:
+          probability: 1
+
+
+  #feign常用配置
+  feign:
+    httpclient:
+
+    hystrix:
+      #在Feign中开启Hystrix
+      enabled: true
+    compression:
+      request:
+        #是否对请求进行GZIP压缩
+        enabled: false
+        #指定压缩的请求数据类型
+        mime-types: text/xml,application/xml,application/json
+        #超过该大小的请求会被压缩
+        min-request-size: 2048
+      response:
+        enabled: false #是否对响应进行GZIP压缩
+  #  client:
+  #    config:
+  #      default:
+  #        loggerLevel: FULL
+  # 配置feign日志级别
+  logging:
+    level:
+      com.jourwon.springcloud.service: debug

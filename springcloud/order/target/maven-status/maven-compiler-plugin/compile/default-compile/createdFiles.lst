@@ -1,0 +1,4 @@
+com\itron\spring\alibaba\controller\OrderController.class
+com\itron\spring\alibaba\service\StockFallbackService.class
+com\itron\spring\alibaba\OrderApplication.class
+com\itron\spring\alibaba\service\IStockService.class

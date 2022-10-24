@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="stock" />
+        <module name="sentinel_demo" />
+        <module name="userservice" />
+        <module name="order" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="order" target="11" />
+      <module name="sentinel_demo" target="11" />
+      <module name="springcloud" target="11" />
+      <module name="stock" target="11" />
+      <module name="userservice" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="order" options="" />
+      <module name="sentinel_demo" options="" />
+      <module name="springcloud" options="-parameters" />
+      <module name="stock" options="" />
+      <module name="userservice" options="" />
+    </option>
+  </component>
+</project>
